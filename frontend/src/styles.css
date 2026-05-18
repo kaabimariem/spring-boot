@@ -1,0 +1,51 @@
+/* Global Print Styles */
+@media print {
+  /* Forcer le fond blanc sur tout le document */
+  body, html { 
+    background: white !important; 
+    color: black !important;
+  }
+
+  /* MASQUER LA BARRE LATÉRALE ET TOUTE LA NAVIGATION */
+  app-sidebar, 
+  .sidebar, 
+  .nav, 
+  header, 
+  .header,
+  .no-print,
+  button,
+  .btn-print,
+  footer { 
+    display: none !important; 
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Supprimer les marges et paddings de l'application */
+  .main-layout, 
+  .content, 
+  main { 
+    margin: 0 !important; 
+    padding: 0 !important; 
+    display: block !important;
+    background: white !important;
+  }
+
+  /* Isoler la facture */
+  .page-container { 
+    margin: 0 !important; 
+    padding: 0 !important; 
+    max-width: none !important; 
+    width: 100% !important;
+  }
+
+  .invoice-paper { 
+    box-shadow: none !important; 
+    border: none !important; 
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}

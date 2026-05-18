@@ -1,0 +1,7 @@
+# Ignore local sub-git backups
+.git_backup
+**/.git_backup
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+<div class="app-layout" [class.no-sidebar]="isAuthPage()">
+  <aside class="sidebar" *ngIf="!isAuthPage()">
+    <div class="sidebar-header">
+      <span class="logo">🚀 ERP Mini</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <a routerLink="/products" routerLinkActive="active" class="nav-item">
+        <span class="icon">📦</span> Produits
+      </a>
+      <a routerLink="/invoices" routerLinkActive="active" class="nav-item">
+        <span class="icon">📄</span> Factures
+      </a>
+      <a routerLink="/clients" routerLinkActive="active" class="nav-item">
+        <span class="icon">👥</span> Clients
+      </a>
+      <a routerLink="/providers" routerLinkActive="active" class="nav-item">
+        <span class="icon">🏢</span> Fournisseurs
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <button (click)="logout()" class="logout-btn">
+        <span class="icon">🚪</span> Déconnexion
+      </button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
